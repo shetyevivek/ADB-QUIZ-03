@@ -24,6 +24,7 @@ $sql = "SELECT * FROM ptelect WHERE year=$year AND state_po='$stateco' ORDER BY 
 $result = mysqli_query($con, $sql) or die('Error ' . mysqli_error($con));
 
 $count = 0;
+$naam = "Vivek";
 
 while($row = mysqli_fetch_array($result))
 {
@@ -60,7 +61,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
     yValueFormatString: "#,##0.00\"%\"",
     indexLabel: "{label} ({y})",
     showInLegend: true,
-    legendText: "{label}",
+    legendText: "$naam",
     dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
   }]
 });
