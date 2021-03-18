@@ -50,7 +50,7 @@ while($row = mysqli_fetch_array($result))
 <script>
 window.onload = function() {
 
-  var name = <?php echo '$stateco'; ?>
+  var name = "<?php echo '$stateco'; ?>";
  
 var chart = new CanvasJS.Chart("chartContainer", {
   animationEnabled: true,
