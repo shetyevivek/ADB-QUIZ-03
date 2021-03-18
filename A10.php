@@ -62,7 +62,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
     yValueFormatString: "#,##0.00\"%\"",
     indexLabel: "({y})",
     indexLabelPlacement: "inside",
-    indexLabelFontColor: "#36454F",
+    indexLabelFontColor: "#000000",
     indexLabelFontSize: 10,
     indexLabelFontWeight: "bolder",
     showInLegend: true,
