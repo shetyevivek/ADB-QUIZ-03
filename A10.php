@@ -49,7 +49,8 @@ while($row = mysqli_fetch_array($result))
 <link rel="stylesheet" href="removeWatermark.css">
 <script>
 window.onload = function() {
- 
+
+  var name = <?php echo '$stateco'; ?>
  
 var chart = new CanvasJS.Chart("chartContainer", {
   animationEnabled: true,
@@ -61,7 +62,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
     yValueFormatString: "#,##0.00\"%\"",
     indexLabel: "{label} ({y})",
     showInLegend: true,
-    legendText: "<?php echo '$stateco'; ?>",
+    legendText: "name",
     dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
   }]
 });
