@@ -28,8 +28,8 @@ $count = 0;
 
 while($row = mysqli_fetch_array($result))
 {
-    $dataPoints[$i]["y"] = $row['year'];
-    $dataPoints[$i]["label"] = $row['T1'];
+    $dataPoints[$count]["y"] = $row['year'];
+    $dataPoints[$count]["label"] = $row['T1'];
 
     $count++;
 }
