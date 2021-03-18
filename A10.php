@@ -24,7 +24,6 @@ $sql = "SELECT * FROM ptelect WHERE year=$year AND state_po='$stateco' ORDER BY 
 $result = mysqli_query($con, $sql) or die('Error ' . mysqli_error($con));
 
 $count = 0;
-$naam = "Vivek";
 
 while($row = mysqli_fetch_array($result))
 {
@@ -33,9 +32,6 @@ while($row = mysqli_fetch_array($result))
 	$name = $row['candidate'];
   $party = $row['party_simplified'];
 	$votes = ($v1/$v2)*100;
-
-  echo $votes;
-  echo "<br>";
 
   $dataPoints[$count]["y"] = $votes;
   $dataPoints[$count]["label"] = $name;
