@@ -62,7 +62,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
     yValueFormatString: "#,##0.00\"%\"",
     indexLabel: "{label} ({y})",
     showInLegend: true,
-    legendText: "name",
+    legendText: name,
     dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
   }]
 });
