@@ -52,7 +52,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
         title: "Year"
     },
     axisY: {
-        title: "Candidate Count"
+        title: "Candidates Count"
     },
     data: [{
         type: "bar",
