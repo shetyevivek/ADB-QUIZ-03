@@ -64,6 +64,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
     indexLabelPlacement: "inside",
     indexLabelFontColor: "#36454F",
     indexLabelFontSize: 10,
+    indexLabelFontWeight: "bolder",
     showInLegend: true,
     legendText: "{party}",
     dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
