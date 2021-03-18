@@ -46,7 +46,7 @@ window.onload = function() {
 var chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
     title:{
-        text: "Presedential Election"
+        text: "Presidential Elections"
     },
     axisX: {
         title: "Year"
