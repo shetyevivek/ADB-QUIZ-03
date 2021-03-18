@@ -60,7 +60,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
   data: [{
     type: "pie",
     yValueFormatString: "#,##0.00\"%\"",
-    indexLabel: "{label} ({y})",
+    indexLabel: "({y})",
     indexLabelPlacement: "inside",
     indexLabelFontColor: "#36454F",
     indexLabelFontSize: 10,
