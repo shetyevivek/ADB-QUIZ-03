@@ -59,7 +59,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
   },
   data: [{
     type: "pie",
-    yValueFormatString: "#,##0.00\"%\"",
+    yValueFormatString: "#,##0.000\"%\"",
     indexLabel: "{label} ({y})",
     showInLegend: true,
     legendText: "{party}",
