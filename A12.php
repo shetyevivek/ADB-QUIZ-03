@@ -21,7 +21,7 @@ $stateco = $_POST['stateco'];
 
 $dataPoints = array();
 
-$sql = "SELECT COUNT(totalvotes) AS T1, year FROM ptelect WHERE year BETWEEN $year1 AND $year2 AND state_po='$stateco' GROUP BY year";
+$sql = "SELECT COUNT(DISTINCT candidate) AS T1, year FROM ptelect WHERE year BETWEEN $year1 AND $year2 AND state_po='$stateco' GROUP BY year";
 $result = mysqli_query($con, $sql) or die('Error ' . mysqli_error($con));
 
 $count = 0;
