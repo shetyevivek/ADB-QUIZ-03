@@ -60,7 +60,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
         type: "scatter",
         markerType: "square",
         markerSize: 10,
-        toolTipContent: "Year: {x}<br>Total Votes: {y}",
+        toolTipContent: "Year: {label}<br>Total Votes: {y}",
         dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
     }]
 });
@@ -70,7 +70,7 @@ chart.render();
 </script>
 </head>
 <body>
-<div id="chartContainer" style="height: 100%; width: 80%;"></div>
+<div id="chartContainer" style="height: 100%; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 </html>
