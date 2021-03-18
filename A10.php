@@ -31,6 +31,7 @@ while($row = mysqli_fetch_array($result))
   $v1 = $row['candidatevotes'];
 	$v2 = $row['totalvotes'];
 	$name = $row['candidate'];
+  $party = $row['party_simplified'];
 	$votes = ($v1/$v2)*100;
 
   echo $votes;
@@ -38,6 +39,7 @@ while($row = mysqli_fetch_array($result))
 
   $dataPoints[$count]["y"] = $votes;
   $dataPoints[$count]["label"] = $name;
+  $dataPoints[$count]["party"] = $party;
   $count++;
 }
 
@@ -49,8 +51,6 @@ while($row = mysqli_fetch_array($result))
 <link rel="stylesheet" href="removeWatermark.css">
 <script>
 window.onload = function() {
-
-  var name = "<?php echo '$stateco'; ?>";
  
 var chart = new CanvasJS.Chart("chartContainer", {
   animationEnabled: true,
@@ -62,7 +62,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
     yValueFormatString: "#,##0.00\"%\"",
     indexLabel: "{label} ({y})",
     showInLegend: true,
-    legendText: name,
+    legendText: "{party}",
     dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
   }]
 });
