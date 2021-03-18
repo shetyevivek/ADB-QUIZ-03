@@ -49,10 +49,10 @@ var chart = new CanvasJS.Chart("chartContainer", {
         text: "Presedential Election"
     },
     axisX: {
-        title: "Candidate Count"
+        title: "Year"
     },
     axisY: {
-        title: "Year"
+        title: "Candidate Count"
     },
     data: [{
         type: "bar",
